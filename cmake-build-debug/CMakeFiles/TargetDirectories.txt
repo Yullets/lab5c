@@ -1,0 +1,6 @@
+C:/Users/Yulia/CLionProjects/5c/cmake-build-debug/CMakeFiles/5c.dir
+C:/Users/Yulia/CLionProjects/5c/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Yulia/CLionProjects/5c/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Yulia/CLionProjects/5c/cmake-build-debug/sortFunctions/CMakeFiles/sortFunctions.dir
+C:/Users/Yulia/CLionProjects/5c/cmake-build-debug/sortFunctions/CMakeFiles/edit_cache.dir
+C:/Users/Yulia/CLionProjects/5c/cmake-build-debug/sortFunctions/CMakeFiles/rebuild_cache.dir
