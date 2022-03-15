@@ -22,7 +22,7 @@
 #define ARRAY_SIZE(a) sizeof(a) / sizeof(a[0])
 
 typedef struct SortFunc {
-    long long (*sort)(int *a, size_t n);
+    void (*sort)(int *a, size_t n);
 
     char name[64];
 } SortFunc;
@@ -47,20 +47,32 @@ void checkNComps(long long (*sortFunc )(int *, size_t),
 
 void compsExperiment();
 
-long long bubbleSort(int *a, size_t n);
+long long getBubbleSortComp(int *a, size_t n);
+
+void bubbleSort(int *a, size_t n);
 
 int getMinIndex(const int *a, size_t n);
 
-long long selectionSort(int *a, size_t n);
+long long getSelectionSortComp(int *a, size_t n);
 
-long long insertionSort(int *a, size_t n);
+void selectionSort(int *a, size_t n);
 
-long long combSort(int *a, size_t n);
+long long getInsertionSortComp(int *a, size_t n);
 
-long long shellSort(int *a, size_t n);
+void insertionSort(int *a, size_t n);
+
+void combSort(int *a, size_t n);
+
+long long getCombSortComp(int *a, size_t n);
+
+long long getShellSortComp(int *a, size_t n);
+
+void shellSort(int *a, size_t n);
 
 void getPrefSum(int *a, size_t n);
 
-long long digitSort(int *a, size_t n);
+long long getDigitSortComp(int *a, size_t n);
+
+void digitSort(int *a, size_t n);
 
 #endif //INC_5C_SORTFUNCTIONS_H

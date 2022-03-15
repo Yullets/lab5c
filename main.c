@@ -1,6 +1,6 @@
 #include "sortFunctions/sortFunctions.h"
 
 int main() {
-    compsExperiment();
+    timeExperiment();
     return 0;
 }
