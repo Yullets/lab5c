@@ -61,6 +61,12 @@ build CMakeFiles/5c.dir/sortFunctions/sortFunctions.c.obj: C_COMPILER__5c_Debug 
   OBJECT_DIR = CMakeFiles\5c.dir
   OBJECT_FILE_DIR = CMakeFiles\5c.dir\sortFunctions
 
+build CMakeFiles/5c.dir/algorithm/algorithm.c.obj: C_COMPILER__5c_Debug C$:/Users/Yulia/CLionProjects/5c/algorithm/algorithm.c || cmake_object_order_depends_target_5c
+  DEP_FILE = CMakeFiles\5c.dir\algorithm\algorithm.c.obj.d
+  FLAGS = -g -std=gnu11
+  OBJECT_DIR = CMakeFiles\5c.dir
+  OBJECT_FILE_DIR = CMakeFiles\5c.dir\algorithm
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target 5c
@@ -69,7 +75,7 @@ build CMakeFiles/5c.dir/sortFunctions/sortFunctions.c.obj: C_COMPILER__5c_Debug 
 #############################################
 # Link the executable 5c.exe
 
-build 5c.exe: C_EXECUTABLE_LINKER__5c_Debug CMakeFiles/5c.dir/main.c.obj CMakeFiles/5c.dir/sortFunctions/sortFunctions.c.obj
+build 5c.exe: C_EXECUTABLE_LINKER__5c_Debug CMakeFiles/5c.dir/main.c.obj CMakeFiles/5c.dir/sortFunctions/sortFunctions.c.obj CMakeFiles/5c.dir/algorithm/algorithm.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\5c.dir
@@ -162,9 +168,72 @@ build sortFunctions/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build sortFunctions/rebuild_cache: phony sortFunctions/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Yulia/CLionProjects/5c/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target algorithm
+
+
+#############################################
+# Order-only phony target for algorithm
+
+build cmake_object_order_depends_target_algorithm: phony || algorithm/CMakeFiles/algorithm.dir
+
+build algorithm/CMakeFiles/algorithm.dir/algorithm.c.obj: C_COMPILER__algorithm_Debug C$:/Users/Yulia/CLionProjects/5c/algorithm/algorithm.c || cmake_object_order_depends_target_algorithm
+  DEP_FILE = algorithm\CMakeFiles\algorithm.dir\algorithm.c.obj.d
+  FLAGS = -g -std=gnu11
+  OBJECT_DIR = algorithm\CMakeFiles\algorithm.dir
+  OBJECT_FILE_DIR = algorithm\CMakeFiles\algorithm.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target algorithm
+
+
+#############################################
+# Link the static library algorithm\libalgorithm.a
+
+build algorithm/libalgorithm.a: C_STATIC_LIBRARY_LINKER__algorithm_Debug algorithm/CMakeFiles/algorithm.dir/algorithm.c.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = algorithm\CMakeFiles\algorithm.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = algorithm\libalgorithm.a
+  TARGET_PDB = algorithm.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build algorithm/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\Yulia\CLionProjects\5c\cmake-build-debug\algorithm && "D:\Studing programs\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build algorithm/edit_cache: phony algorithm/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build algorithm/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\Yulia\CLionProjects\5c\cmake-build-debug\algorithm && "D:\Studing programs\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\Yulia\CLionProjects\5c -BC:\Users\Yulia\CLionProjects\5c\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build algorithm/rebuild_cache: phony algorithm/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
 build 5c: phony 5c.exe
+
+build algorithm: phony algorithm/libalgorithm.a
+
+build libalgorithm.a: phony algorithm/libalgorithm.a
 
 build libsortFunctions.a: phony sortFunctions/libsortFunctions.a
 
@@ -178,7 +247,14 @@ build sortFunctions: phony sortFunctions/libsortFunctions.a
 #############################################
 # Folder: C:/Users/Yulia/CLionProjects/5c/cmake-build-debug
 
-build all: phony 5c.exe sortFunctions/all
+build all: phony 5c.exe sortFunctions/all algorithm/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Yulia/CLionProjects/5c/cmake-build-debug/algorithm
+
+build algorithm/all: phony algorithm/libalgorithm.a
 
 # =============================================================================
 
@@ -194,14 +270,14 @@ build sortFunctions/all: phony sortFunctions/libsortFunctions.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../sortFunctions/CMakeLists.txt CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeRCCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCInformation.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeGenericSystem.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeRCInformation.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-C.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-windres.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../algorithm/CMakeLists.txt ../sortFunctions/CMakeLists.txt CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeRCCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCInformation.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeGenericSystem.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeRCInformation.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-C.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-windres.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../sortFunctions/CMakeLists.txt CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeRCCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCInformation.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeGenericSystem.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeRCInformation.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-C.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-windres.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/WindowsPaths.cmake: phony
+build ../CMakeLists.txt ../algorithm/CMakeLists.txt ../sortFunctions/CMakeLists.txt CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeRCCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCInformation.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeGenericSystem.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeRCInformation.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-C.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-windres.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows.cmake D$:/Studing$ programs/CLion$ 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/Platform/WindowsPaths.cmake: phony
 
 
 #############################################

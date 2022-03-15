@@ -103,6 +103,9 @@
 		},
 		{
 			"path" : "sortFunctions/CMakeLists.txt"
+		},
+		{
+			"path" : "algorithm/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

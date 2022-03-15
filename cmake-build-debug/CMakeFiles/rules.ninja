@@ -58,6 +58,25 @@ rule C_STATIC_LIBRARY_LINKER__sortFunctions_Debug
 
 
 #############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__algorithm_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = "D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\gcc.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__algorithm_Debug
+  command = cmd.exe /C "$PRE_LINK && "D:\Studing programs\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E rm -f $TARGET_FILE && "D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\ar.exe" qc $TARGET_FILE $LINK_FLAGS $in && "D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\ranlib.exe" $TARGET_FILE && $POST_BUILD"
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE

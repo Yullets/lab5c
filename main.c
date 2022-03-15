@@ -1,6 +1,7 @@
-#include <stdio.h>
+#include "sortFunctions/sortFunctions.h"
 
 int main() {
-    printf("Hello, World!\n");
+    timeExperiment();
+
     return 0;
 }

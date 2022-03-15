@@ -8,7 +8,8 @@
 					"build" : ".",
 					"childIndexes" : 
 					[
-						1
+						1,
+						2
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -34,6 +35,21 @@
 					"source" : "sortFunctions",
 					"targetIndexes" : 
 					[
+						2
+					]
+				},
+				{
+					"build" : "algorithm",
+					"jsonFile" : "directory-algorithm-Debug-23aeeb71a90053b18e8d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "algorithm",
+					"targetIndexes" : 
+					[
 						1
 					]
 				}
@@ -45,13 +61,15 @@
 					"directoryIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					],
 					"name" : "5c",
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -60,8 +78,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "5c::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-5c-Debug-6798f9b672284aaa286b.json",
+					"jsonFile" : "target-5c-Debug-76fbbc7066153bff256f.json",
 					"name" : "5c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "algorithm::@b8e9a88a05f6c4e5712f",
+					"jsonFile" : "target-algorithm-Debug-39ffbbd45533510b2851.json",
+					"name" : "algorithm",
 					"projectIndex" : 0
 				},
 				{
